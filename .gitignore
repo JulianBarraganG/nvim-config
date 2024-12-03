@@ -23,6 +23,9 @@ session/
 # Ignore Copilot plugin (if installed in pack directory)
 pack/*/start/copilot.*
 
+# Ignore auto-generated files
+plugin/*
+
 # Ignore local user overrides (if applicable)
 local.vim
 local.lua

@@ -12,7 +12,14 @@ return require('packer').startup(function(use)
 	-- or                            , branch = '0.1.x',
 	requires = { {'nvim-lua/plenary.nvim'} }
   }
+
+  use({
+	"iamcco/markdown-preview.nvim",
+	run = "cd app && npm install",
+	setup = function() vim.g.mkdp_auto_start = 1 end
+})
   use { "catppuccin/nvim", as = "catppuccin" }
   use ( 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use ( 'nvim-treesitter/playground') 
  end)
+
