@@ -1,0 +1,28 @@
+# Ignore all plugins (packer.nvim setup usually installs them automatically)
+pack/
+
+# Ignore swap files
+*.swp
+*.swo
+*.swn
+
+# Ignore backup files
+*.bak
+*.tmp
+
+# Ignore undo history
+*.un~
+
+# Ignore logs and cache
+log/
+*.log
+cache/
+session/
+*.session
+
+# Ignore Copilot plugin (if installed in pack directory)
+pack/*/start/copilot.*
+
+# Ignore local user overrides (if applicable)
+local.vim
+local.lua
