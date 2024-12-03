@@ -15,10 +15,9 @@ This configuration has been tested on **Linux Mint** and **Ubuntu**. It should w
     ```
 If your configs are in a different directory, replace `~/.config/nvim` with the correct path.
 2. Clone this repository into your Neovim configuration directory:
-    ```bash
+```bash
     rm -rf ~/.config/nvim && git clone https://github.com/JulianBarraganG/nvim-config ~/.config/nvim
     ```
-
 ### Alternative Installation
 If you'd like to test the configuration without permanently removing your existing setup, you can use a symbolic link to point Neovim to this repository:
 1. Backup your existing Neovim configuration:
