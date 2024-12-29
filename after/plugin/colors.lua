@@ -1,24 +1,21 @@
+-- Function to switch between themes
 function ColorMyPencils(color)
+
 	if color == "help" then
 		print("Switch themes with the command")
-		print(":lua ColorMyPencils(color)")
-		print("Available themes are:")
-		print("catpuccin (default) | catpuccin-latte | catppuccin-frappe | catppuccin-macchiato | catppuccin-mocha")
+		print("lua ColorMyPencils(color)")
+		print("Available themes are")
+		print("catpuccin-mocha (default) | catpuccin-latte | PaperColor")
 		return
-	end
-	if color ~= "help" then
-		color = color or "catppuccin"
-	end
-	color = "catppuccin"
-	vim.cmd.colorscheme(color)
 
+    	elseif color ~= "help" then 
+		vim.cmd.colorscheme("catppuccin")
+	else 
+		vim.cmd.colorscheme(color)
+	end
+	
 	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 end
 
-function ColorMyPencil()
-	print("ColorMyPencil is not a function. Did you mean ColorMyPencils()?")
-	print("For help, run :lua ColorMyPencils('help')")
-end
-
-ColorMyPencils()
+ColorMyPencils("catpuccin")

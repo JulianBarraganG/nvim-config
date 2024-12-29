@@ -31,8 +31,24 @@ return require('packer').startup(function(use)
   end
   }
 
+  --[[ Colorschemes ]] --
+  use { "NLKNguyen/papercolor-theme", as = "papercolor" }
   use { "catppuccin/nvim", as = "catppuccin" }
-  use { 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'}}
-  use { 'nvim-treesitter/playground' } 
- end)
+  --[[ Other Plugins ]] --
+  use ( 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+  use ( 'nvim-treesitter/playground' )
+  use ( 'nvim-lua/plenary.nvim' )
+  use ( 'ThePrimeagen/harpoon' )
+  use ( 'mbbill/undotree' )
+  use ( 'tpope/vim-fugitive' ) -- git
+  --[[ LSP ]] --
+  use( 'neovim/nvim-lspconfig' )
+  use( 'hrsh7th/nvim-cmp' )
+  use( 'hrsh7th/cmp-nvim-lsp' )
+  use( "hrsh7th/cmp-buffer" )
+  use( "hrsh7th/cmp-path" )
+  use( "hrsh7th/cmp-cmdline" )
+  use( 'williamboman/mason.nvim' )
+  use( 'williamboman/mason-lspconfig.nvim' )
+ end )
 
