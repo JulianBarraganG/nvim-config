@@ -9,8 +9,6 @@ require("mason-lspconfig").setup({
 })
 
 
--- Reserve a space in the gutter
-vim.opt.signcolumn = 'yes'
 
 -- Add cmp_nvim_lsp capabilities settings to lspconfig
 -- This should be executed before you configure any language server
@@ -20,6 +18,8 @@ lspconfig_defaults.capabilities = vim.tbl_deep_extend(
 	lspconfig_defaults.capabilities,
 	require('cmp_nvim_lsp').default_capabilities()
 )
+-- LSP reserves some space in the sign column, disable it
+vim.opt.signcolumn = 'no'
 
 -- This is where you enable features that only work
 -- if there is a language server active in the file
@@ -61,5 +61,33 @@ cmp.setup({
 			vim.snippet.expand(args.body)
 		end,
 	},
-	mapping = cmp.mapping.preset.insert({}),
+	mapping = {
+		['<C-n>'] = cmp.mapping.select_next_item(),
+		['<C-p>'] = cmp.mapping.select_prev_item(),
+		['<C-d>'] = cmp.mapping.scroll_docs(-4),
+		['<C-f>'] = cmp.mapping.scroll_docs(4),
+		['<C-Space>'] = cmp.mapping.complete(),
+		['<CR>'] = cmp.mapping.confirm({ select = true }),
+	},
 })
+
+-- Configure diagnostics
+vim.diagnostic.config({
+	signs = false, -- Disable signs in the gutter
+	underline = true, -- Underline errors and warnings
+	virtual_text = false, -- Disable virtual text
+	update_in_insert = false, -- Don't update diagnostics in insert mode
+})
+
+-- For toggling LSP in line error messages
+local in_line = false
+
+-- Function to toggle LSP signs
+function ToggleLspErrors()
+  in_line = not in_line
+  vim.diagnostic.config({ virtual_text = in_line })
+  print("LSP virtual text " .. (in_line and "enabled" or "disabled"))
+end
+
+vim.keymap.set("n", "<leader>te", ToggleLspErrors, { desc = "Toggle LSP errors" })
+
