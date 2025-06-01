@@ -5,7 +5,8 @@ require("mason-lspconfig").setup({
 		"pyright",		-- Python LS
 		"harper_ls",		-- C/C++ and more LS
 		"fsautocomplete",	-- F#
-	}
+	};
+	automatic_enable = false
 })
 
 
