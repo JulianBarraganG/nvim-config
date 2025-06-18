@@ -18,6 +18,10 @@ bootstrap_pckr()
 
 
 require('pckr').add{
+
+  -- Copilot (for loading only, must be cloned)
+  'github/copilot.vim';
+
   -- Telescope
   {
     'nvim-telescope/telescope.nvim',
@@ -30,7 +34,8 @@ require('pckr').add{
     "lervag/vimtex",
     lazy = false,
     init = function()
-      vim.g.vimtex_view_method = "zathura"
+      vim.g.vimtex_view_method = "xreader"
+      vim.g.vimtex_quickfix_open_on_warning = 0
     end
   };
 
