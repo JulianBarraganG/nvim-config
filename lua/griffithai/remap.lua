@@ -22,3 +22,4 @@ vim.keymap.set("n", "<leader>Y", '"+Y') -- cap Y yanks to system clipboard
 
 -- Worst place in the universe
 vim.keymap.set("n", "Q", "<nop>")
+
