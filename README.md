@@ -35,8 +35,9 @@ ln -s ~/<your-dir>/nvim-config ~/.config/nvim
 
 This method ensures that you can test the new configuration while preserving your old setup.
 
-## Installing Copilot
-I personally use Copilot for coding, but it is not included in this public repo.  
+## Some Notes on Copilot
+I have Copilot set up, but currently I only use it for documentation generation.
+I've enabled a keybinding to turn Copilot on and off. You may want to remove this if you don't use Copilot.
 To install Copilot, follow the instructions at [copilot.vim](https://github.com/github/copilot.vim).  
 Make sure to have Node.js and the required version of Neovim installed.
 
