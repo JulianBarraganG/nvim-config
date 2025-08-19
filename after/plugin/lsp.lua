@@ -2,9 +2,10 @@ require("mason").setup()
 require("mason-lspconfig").setup({
 	ensure_installed = {
 		"lua_ls",		-- Lua LS
-		"pyright",		-- Python LS
+		"pyright", 		-- Python LS
 		"harper_ls",		-- C/C++ and more LS
 		"fsautocomplete",	-- F#
+		"ruff",			-- ruff linter
 	};
 	automatic_enable = false
 })

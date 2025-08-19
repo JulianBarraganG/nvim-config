@@ -4,3 +4,4 @@ vim.keymap.set('n', '<C-p>', builtin.git_files, { desc = 'While in git, Telescop
 vim.keymap.set('n', '<leader>ps', function()
 	builtin.grep_string({ search = vim.fn.input("Grep > ") });
 end)
+

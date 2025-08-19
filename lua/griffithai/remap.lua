@@ -1,9 +1,3 @@
---[[ Costum Remappings ]]--
-require("after.plugin.toggle_copilot")
-
--- Copilot enable/disable
-vim.keymap.set({"n","i","v","x"}, "<leader>cp", ToggleCopilot, { desc = "Toggle Copilot" })
-
 vim.g.mapleader = " "
 
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
@@ -22,4 +16,3 @@ vim.keymap.set("n", "<leader>Y", '"+Y') -- cap Y yanks to system clipboard
 
 -- Worst place in the universe
 vim.keymap.set("n", "Q", "<nop>")
-

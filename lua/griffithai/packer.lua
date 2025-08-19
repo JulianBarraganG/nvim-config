@@ -16,11 +16,9 @@ end
 
 bootstrap_pckr()
 
-
 require('pckr').add{
-
-  -- Copilot (for loading only, must be cloned)
-  'github/copilot.vim';
+  -- Packer can manage itself
+  'wbthomason/packer.nvim';
 
   -- Telescope
   {
@@ -29,19 +27,20 @@ require('pckr').add{
     requires = { {'nvim-lua/plenary.nvim'} }
   };
 
+
   -- VimTeX
   {
     "lervag/vimtex",
     lazy = false,
     init = function()
-      vim.g.vimtex_view_method = "xreader"
-      vim.g.vimtex_quickfix_open_on_warning = 0
+      vim.g.vimtex_view_method = "zathura"
     end
   };
 
   -- Colorschemes
   { "NLKNguyen/papercolor-theme", as = "papercolor" };
   { "catppuccin/nvim", as = "catppuccin" };
+  { "folke/tokyonight.nvim", as = "tokyonight" };
 
   -- Other Plugins
   { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' };
@@ -61,4 +60,3 @@ require('pckr').add{
   'williamboman/mason.nvim';
   'williamboman/mason-lspconfig.nvim';
 }
-
