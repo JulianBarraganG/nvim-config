@@ -13,7 +13,7 @@ function ColorMyPencils(color)
 		return
 
     	elseif color == "catppuccin" then
-		vim.cmd.colorscheme("catppuccin-")
+		vim.cmd.colorscheme("catppuccin-mocha")
 	elseif color == "tokyonight" then
 		vim.cmd.colorscheme("tokyonight-moon")
 	else
