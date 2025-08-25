@@ -3,11 +3,11 @@ local default = "tokyonight-moon"
 local rose =  "#f7768e"
 local violet ="#7aa2f7"
 
-function ColorMyPencils(color)
+function ColorTheme(color)
 
 	if color == "help" then
 		print("Switch themes with the command")
-		print("lua ColorMyPencils(color)")
+		print("lua ColorTheme(color)")
 		print("Available themes are")
 		print("catppuccin | tokyonight")
 		return
@@ -21,8 +21,10 @@ function ColorMyPencils(color)
 	end
 
 	-- See through background 
+	--[[ Commented out for now
 	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+	]]--
 
 	-- Customize line numbers
 	vim.api.nvim_set_hl(0, "LineNrAbove", { fg = violet })
@@ -30,5 +32,5 @@ function ColorMyPencils(color)
 	vim.api.nvim_set_hl(0, "LineNrBelow", { fg = violet })
 end
 
-ColorMyPencils(default)
+ColorTheme(default)
 

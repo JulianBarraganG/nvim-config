@@ -1,5 +1,5 @@
 --[[ Costum Remappings ]]--
-require("after.plugin.toggle_copilot")
+require("griffithai.toggle_copilot")
 
 vim.g.mapleader = " "
 
