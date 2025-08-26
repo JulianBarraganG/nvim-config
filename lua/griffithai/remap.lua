@@ -4,7 +4,7 @@ require("griffithai.toggle_copilot")
 vim.g.mapleader = " "
 
 -- Copilot enable/disable
-vim.keymap.set({"n","i","v","x"}, "<leader>cp", ToggleCopilot, { desc = "Toggle Copilot" })
+-- vim.keymap.set({"n","i","v","x"}, "<leader>cp", ToggleCopilot, { desc = "Toggle Copilot" })
 
 
 vim.keymap.set("n", "<leader>pv", "<CMD>Oil<CR>")
