@@ -17,8 +17,6 @@ end
 bootstrap_pckr()
 
 require('pckr').add{
-  -- Packer can manage itself
-  'wbthomason/packer.nvim';
 
   -- Telescope
   {
@@ -65,5 +63,9 @@ require('pckr').add{
   'hrsh7th/cmp-cmdline';
   'williamboman/mason.nvim';
   'williamboman/mason-lspconfig.nvim';
+
+  -- Copilot
+  'github/copilot.vim';
+
 }
 
